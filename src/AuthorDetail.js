@@ -4,7 +4,7 @@ import React from "react";
 function AuthorDetail(props){
     const author = props.author;
     const bookDetail = props.author.books.map(book => (
-        <tr>
+        <tr key={book.title}>
         <td>{book.title}</td>
         <td>{`${props.author.first_name} ${props.author.last_name}`}</td>
         <td>
